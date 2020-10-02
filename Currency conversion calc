@@ -1,0 +1,110 @@
+def start():
+    
+    # Code prompts for USD conversion rates
+    # Use uppercase function to force the input to all caps
+
+    print("Currency Conversion for USD, EURO, YEN, RUPEES, and CANADIAN!")
+    currency = input("Which currency would you like to see conversion rates for?: ").upper()
+
+
+    # Code if statements for each type of currency
+    # Code conversion rate math
+
+    if currency == "USD":
+        print("1 USD is equal to .85 Euro!")
+        print("1 USD is equal to  105.19 Yen!")
+        print("1 USD is equal to  73.44 Rupees!")
+        print("1 USD is equal to 1.33 Canadian!")
+        conversion = input("What would you like to convert USD into?: ").upper()
+        if conversion == "EURO":
+            convert = int(input("How much USD would you like to convert?: "))
+            sum = float(convert) * (.85)
+            print("The total of {0} USD converted to Euro's is {1} ".format(convert, round(sum, 2)))
+            restart = input("Would you like to do an other conversion?: ").upper()
+            if restart == "YES":
+                start()
+            else:
+                exit()
+        elif conversion == "YEN":
+            convert = int(input("How much USD would you like to convert?: "))
+            sum = float(convert) * (105.19)
+            print("The total of {0} USD converted to YEN is {1} ".format(convert, round(sum, 2)))
+            restart = input("Would you like to do an other conversion?: ").upper()
+            if restart == "YES":
+                start()
+            else:
+                exit()
+        elif conversion == "RUPEES":
+            convert = int(input("How much USD would you like to convert?: "))
+            sum = float(convert) * (73.44)
+            print("The total of {0} USD converted to RUPEES is {1} ".format(convert, round(sum, 2)))
+            restart = input("Would you like to do an other conversion?: ").upper()
+            if restart == "YES":
+                start()
+            else:
+                exit()
+        elif conversion == "CANADIAN":
+            convert = int(input("How much USD would you like to convert?: "))
+            sum = float(convert) * (1.33)
+            print("The total of {0} USD converted to CANADIAN is {1} ".format(convert, round(sum, 2)))
+            restart = input("Would you like to do an other conversion?: ").upper()
+            if restart == "YES":
+                start()
+            else:
+                exit()
+        else:
+            print("Sorry we can calcualte that currenct yet!")
+            restart = input("Would you like to do an other conversion?: ").upper()
+            if restart == "YES":
+                start()
+
+    if currency == "YEN":
+            print("1 YEN is equal to .0081 Euro!")
+            print("1 YEN is equal to .0095 USD!")
+            print("1 YEN is equal to .70 Rupees!")
+            print("1 YEN is equal to .013 Canadian!")
+            conversion = input("What would you like to convert YEN into?: ").upper()
+            if conversion == "EURO":
+                convert = int(input("How much YEN would you like to convert?: "))
+                sum = float(convert) * (.0081)
+                print("The total of {0} YEN converted to Euro's is {1} ".format(convert, round(sum, 2)))
+                restart = input("Would you like to do an other conversion?: ").upper()
+                if restart == "YES":
+                    start()
+                else:
+                    exit()
+            elif conversion == "USD":
+                convert = int(input("How much YEN would you like to convert?: "))
+                sum = float(convert) * (.0095)
+                print("The total of {0} YEN converted to USD is {1} ".format(convert, round(sum, 2)))
+                restart = input("Would you like to do an other conversion?: ").upper()
+                if restart == "YES":
+                    start()
+                else:
+                    exit()
+            elif conversion == "RUPEES":
+                convert = int(input("How much YEN would you like to convert?: "))
+                sum = float(convert) * (.70)
+                print("The total of {0} Yen converted to RUPEES is {1} ".format(convert, round(sum, 2)))
+                restart = input("Would you like to do an other conversion?: ").upper()
+                if restart == "YES":
+                    start()
+                else:
+                    exit()
+            elif conversion == "CANADIAN":
+                convert = int(input("How much YEN would you like to convert?: "))
+                sum = float(convert) * (.013)
+                print("The total of {0} YEN converted to CANADIAN is {1} ".format(convert, round(sum, 2)))
+                restart = input("Would you like to do an other conversion?: ").upper()
+                if restart == "YES":
+                    start()
+                else:
+                    exit()
+            else:
+                print("Sorry we can calcualte that currenct yet!")
+                restart = input("Would you like to do an other conversion?: ").upper()
+                if restart == "YES":
+                    start()
+
+
+start()
